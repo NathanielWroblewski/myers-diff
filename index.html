@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The Myers Difference Algorithm</title>
+    <link rel="stylesheet" type="text/css" href="/public/stylesheets/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Diffing Files</h1>
+      <p class="subtitle">The Myers Difference Algorithm</p>
+      <section>
+        <p class="text">
+          In 1986, Eugene Myers published <a href="http://www.xmailserver.org/diff2.pdf">An O(ND) Difference Algorithm and Its Variations</a>, which unified the problems of finding the longest common subsequence of two sequences (the LCS of "driftwood" and "artwork" is "two") and finding the shortest edit script for transforming one sequence into another.  Myers showed that these problems were equivalent to finding the shortest path over an "edit graph."
+        </p>
+        <p class="text">
+          His algorithm improved the popular <code>diff</code> utility, a data comparison tool that displays the smallest set of line-by-line deletions and insertions to transform one file into another.  Figure 1 contains an example of <code>diff</code> output, itself called a "diff", when given two similar poems: Colin Morton's 1981 "Empty Bottles" and David Morgan's 2011 plagiarism "Monkey Stops Whistling."
+        </p>
+        <p class="text">In the output, lines prefixed by a "+" are insertions from the destination file, lines prefixed by a "-" are deletions from the source file, and lines lacking a "+" or "-" prefix are lines shared by both sequences.
+        </p>
+        <p class="text figure-title">Figure 1 - Excerpted "diff" of Colin Morton's 1981 poem and David Morgan's plagiarism</p>
+        <div class="diff">
+        </div>
+        <p class="text">
+          To form an edit graph, Myers arranged the source sequence left-to-right along an x-axis and the destination sequence top-to-bottom along a y-axis with an orthogonal grid of horizontal and vertical edges projected from them.  Starting in the upper-left and seeking the bottom-right, each move along the graph's edges toward a vertex would correspond to an edit instruction on the source sequence.  Horizontal moves would be deletions from the source element; vertical moves would be insertions of the destination element.  Where source and destination elements of the sequence are equivalent, diagonal movement is permitted.
+        </p>
+        <p class="text figure-title">Figure 2 - Edit graph with source sequence on x-axis and destination sequence on y-axis</p>
+        <div class="edit-graph">
+        </div>
+        <p class="text">
+          Every trace across this directed, acyclic edit graph is a valid solution.  Myers proposed a type of breadth-first search to discover the shortest traversal in either O(ND) space and time or, using a proposed refinement, in O(N) space and O(NlgN+D<sup>2</sup>) time where D is the size of the minimum edit script.
+        </p>
+        <p class="text figure-title">Figure 3 - Slowed, looped animation of Myers's search fanning out across the edit graph</p>
+        <div class="animation">
+        </div>
+        <p class="text animated-diff">
+        </p>
+      </section>
+    </div>
+  </body>
+  <script type="text/javascript" src="/public/javascripts/namespace.js"></script>
+  <script type="text/javascript" src="/public/javascripts/data/empty_bottles.js"></script>
+  <script type="text/javascript" src="/public/javascripts/data/monkey_stops_whistling.js"></script>
+  <script type="text/javascript" src="/public/javascripts/utilities/diff.js"></script>
+  <script type="text/javascript" src="/public/javascripts/models/animation.js"></script>
+  <script type="text/javascript" src="/public/javascripts/views/diff.js"></script>
+  <script type="text/javascript" src="/public/javascripts/views/edit_graph.js"></script>
+  <script type="text/javascript" src="/public/javascripts/main.js"></script>
+</html>
