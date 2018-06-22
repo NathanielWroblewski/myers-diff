@@ -1,0 +1,279 @@
+@font-face {
+  font-family: "et-book";
+  src: url("/public/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot");
+  src: url("/public/et-book/et-book-roman-line-figures/et-book-roman-line-figures.eot?#iefix") format("embedded-opentype"),
+       url("/public/et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff") format("woff"),
+       url("/public/et-book/et-book-roman-line-figures/et-book-roman-line-figures.ttf") format("truetype"),
+       url("/public/et-book/et-book-roman-line-figures/et-book-roman-line-figures.svg#etbookromanosf") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "et-book";
+  src: url("/public/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot");
+  src: url("/public/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot?#iefix") format("embedded-opentype"),
+       url("/public/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff") format("woff"),
+       url("/public/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf") format("truetype"),
+       url("/public/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.svg#etbookromanosf") format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "et-book";
+  src: url("/public/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot");
+  src: url("/public/et-book/et-book-bold-line-figures/et-book-bold-line-figures.eot?#iefix") format("embedded-opentype"),
+       url("/public/et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff") format("woff"),
+       url("/public/et-book/et-book-bold-line-figures/et-book-bold-line-figures.ttf") format("truetype"),
+       url("/public/et-book/et-book-bold-line-figures/et-book-bold-line-figures.svg#etbookromanosf") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "et-book-roman-old-style";
+  src: url("/public/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot");
+  src: url("/public/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot?#iefix") format("embedded-opentype"),
+       url("/public/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff") format("woff"),
+       url("/public/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf") format("truetype"),
+       url("/public/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.svg#etbookromanosf") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  font-size: 15px;
+}
+
+html, body {
+  height: 100%;
+  width:  100%;
+  padding: 0;
+  margin:  0;
+  background-color: #fffff8;
+  color: #111;
+  font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+  padding: 5rem 1rem;
+}
+
+section {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.title {
+  font-weight: 400;
+  margin-top: 4rem;
+  margin-bottom: 1.5rem;
+  font-size: 3.2rem;
+  line-height: 1;
+}
+
+.subtitle {
+  font-style: italic;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  display: block;
+  line-height: 1;
+}
+
+.op {
+  width: 15px;
+  display: inline-block;
+  padding-left: 0.5rem;
+}
+
+.add { background-color: #cdffd8 }
+.remove { background-color: #ffdce0 }
+.noop {
+  padding-left: 0.3rem;
+  background-color: #fff8f8;
+}
+
+.text {
+  width: 100%;
+  margin-top: 1.4rem;
+  margin-bottom: 1.4rem;
+  vertical-align: baseline;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+.diff {
+  padding-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+.diff .text {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+  color: #555;
+}
+
+.figure-title {
+  font-style: italic;
+  margin-top: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+a:link, a:visited { color: inherit; }
+
+sup {
+  line-height: 1rem;
+}
+
+.edit-graph, .animation {
+  margin: 0 auto;
+  width: 650px;
+}
+
+.edit-graph {
+  margin-bottom: 3rem;
+}
+
+.row {
+  display: block;
+}
+
+.cell {
+  vertical-align: top;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  border-top: 2px solid #ffe1e1;
+  border-left: 2px solid #ffe1e1;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.row:first-child .cell:first-child {
+  width: 80px;
+}
+
+.row:first-child .cell {
+  border: 1px solid transparent;
+}
+
+.cell:first-child {
+  border: 1px solid transparent;
+  line-height: 100px;
+}
+
+.cell:last-child {
+  border-right: 2px solid #ffe1e1;
+}
+
+.row:nth-last-child(2) .cell:nth-child(n + 2) {
+  border-bottom: 2px solid #ffe1e1;
+}
+
+.diagonal {
+  width: 71px;
+  border-bottom: 2px solid #ffe1e1;
+  -webkit-transform:
+    translateY(25px)
+    translateX(-10px)
+    rotate(45deg);
+  position: absolute;
+}
+
+.axes {
+  position: relative;
+  height: 50px;
+  width: 600px;
+}
+
+.axis {
+  position: absolute;
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+.x {
+  text-align: right;
+  bottom: 15px;
+  left: 55px;
+}
+
+.y {
+  left: 445px;
+  bottom: 330px;
+  width: 200px;
+  -webkit-transform: rotate(-90deg);
+     -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+       -o-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+             filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+.insertion {
+  border-left-color: #444;
+}
+
+.deletion {
+  border-top-color: #444;
+}
+
+.diagonal.equivalence {
+  border-color: #444;
+}
+
+.right.insertion {
+  border-right-color: #444;
+}
+
+.active-insertion {
+  border-left-color: #87D37C;
+}
+
+.active-deletion {
+  border-top-color: #87D37C;
+}
+
+.active-equivalence .diagonal {
+  border-color: #87D37C;
+}
+
+.right.active-deletion {
+  border-right-color: #87D37C;
+}
+
+.animation .row:nth-last-child(2) .cell:last-child.insertion.equivalence {
+  border-right-color: #87D37C;
+}
+
+.animated-diff .letter-add {
+  background-color: #cdffd8;
+}
+
+.animated-diff .letter-remove {
+  background-color: #ffdce0;
+}
+
+.animated-diff {
+  color: #555;
+  padding-left: 125px;
+}
+
+.animated-diff .letter-noop {
+  background-color: #fff8f8;
+}
+
+.animated-diff span {
+  margin: 0;
+  padding: 0;
+  width: 25px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  display: inline-block;
+}
