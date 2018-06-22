@@ -1,7 +1,7 @@
 Myers Difference Algorithm
 ===
 
-![Screenshot](https://github.com/NathanielWroblewski/myers/blob/master/screenshot.png)
+![Screenshot](https://github.com/NathanielWroblewski/myers-diff/blob/master/screenshot.png)
 
 In 1986, Eugene Myers published [An O(ND) Difference Algorithm and Its Variations](http://www.xmailserver.org/diff2.pdf), which unified the problems of finding the longest common subsequence of two sequences (the LCS of "driftwood" and "artwork" is "two") and finding the shortest edit script for transforming one sequence into another.  Myers showed that these problems were equivalent to finding the shortest path over an "edit graph."
 
